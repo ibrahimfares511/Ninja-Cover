@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+:root {
+  --main-color: #ED8C5F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alexandria", sans-serif;
+}
+
+/* Start Custom FrameWork */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 8px;
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-solid-button,
+.main-outline-button {
+  display: inline-block;
+  height: 45px;
+  text-align: center;
+  border-radius: 6px;
+  outline: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.main-solid-button {
+  background: var(--main-color);
+  color: #FFFFFF;
+  border-color: transparent;
+}
+
+.main-outline-button {
+  background: #FFFFFF;
+  color: var(--main-color);
+  border-color: var(--main-color);
+
+
+}
+
+/* End Custom FrameWork */
+
+/* Start Main Section Design */
+main {
+  min-height: 100vh;
+  width: calc(100vw - 10px);
+  background: url(../images/main_bg.png);
+  background-size: cover;
+  position: relative;
+}
+
+/* End Main Section Design */
+
+/* Start Navbar Style */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+  color: #FFFFFF;
+  font-weight: 200
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 500
+}
+
+.center-navbar-nav .nav-link {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important
+}
+
+.down_arrow {
+  padding-top: 0.5rem;
+  padding-left: 0.2rem;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../images/icons/Navbar_icon.png);
+}
+
+@media screen and (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+/* End Navbar Style */
+
+/* Start Step Form Section */
+section.step-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+}
+
+section.step-form .step-box {
+  width: 100%;
+  height: 358.73px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+section.step-form .step-box .step-content {
+  width: 50%;
+  height: 100%;
+  background-color: #FFFFFF;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.step-form .step-box .step-content .button-group .hidden {
+  display: none;
+}
+
+
+section.step-form .step-box .step-content .indicator {
+  gap: 5px;
+}
+
+section.step-form .step-box .step-content .indicator span {
+  display: inline-block;
+  width: 15px;
+  height: 3px;
+  background: #C7C7C7;
+}
+
+section.step-form .step-box .step-content .indicator span.active {
+  background: var(--main-color);
+}
+
+section.step-form .step-box .step-content .step-content-slides {
+  min-height: 167px;
+}
+
+section.step-form .step-box .step-content .step-content-box {
+  position: absolute;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+section.step-form .step-box .step-content .step-content-box.show {
+  position: relative;
+  transform: scale(1);
+}
+
+section.step-form .step-box .step-content h3 {
+  font-size: 37.32px;
+}
+
+section.step-form .step-box .step-content h3:first-of-type {
+  font-weight: 300;
+}
+
+section.step-form .step-box .step-content h3:last-of-type {
+  font-weight: 500;
+}
+
+section.step-form .step-box .step-content select {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
+  border: none;
+  background: #EEF3FE;
+  appearance: none;
+  color: #8D8D8D;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+section.step-form .step-box .step-content form::after {
+  content: "";
+  width: 45px;
+  height: 15px;
+  background: url(../images/icons/Down_Arrow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+
+section.step-form .step-box .step-bg {
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+section.step-form .step-box .step-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/step_bg.jpg);
+  background-size: cover;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+section.step-form .step-box .step-bg .icons {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  justify-content: space-between !important;
+}
+
+.step-box .step-bg .icons .box-icon div {
+  width: 83px;
+  height: 83px;
+  border: 5px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.step-box .step-bg .icons .box-icon span {
+  color: #FFFFFF;
+  font-size: 10.23px;
+  font-weight: 400;
+}
+
+
+/* End Step Form Section */
