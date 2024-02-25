@@ -369,6 +369,54 @@ section.step-form .step-box .step-bg .icons {
   font-weight: 400;
 }
 
+/* Start Responsive */
+@media screen and (max-width: 991.98px) {
+  section.step-form .step-box {
+    flex-direction: column-reverse;
+    height: auto
+  }
+
+  section.step-form .step-box .step-content {
+    width: 100%;
+  }
+
+  section.step-form .step-box .step-content .button-group,
+  section.step-form .step-box .step-content .indicator {
+    margin-top: 15px;
+  }
+
+  section.step-form .step-box .step-content .step-content-slides {
+    min-height: 195px;
+  }
+
+  section.step-form .step-box .step-bg {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    justify-content: start;
+  }
+
+  section.step-form .step-box .step-bg .title-phone {
+    z-index: 2;
+    margin-top: 20px
+  }
+
+  section.step-form .step-box .step-bg .title-phone h3 {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 39px;
+    color: white;
+  }
+
+
+  section.step-form .step-box .step-bg .title-phone h3:last-child {
+    font-weight: 500;
+  }
+
+}
+
+/* End Responsive */
+
 /* End Step Form Section */
 
 /* Start About Section */
@@ -388,18 +436,6 @@ section.about .sub-title {
   text-transform: uppercase;
   font-size: 48px;
   font-weight: 600;
-}
-
-@media screen and (max-width: 1399.98px) {
-  section.about .sub-title {
-    font-size: 42px;
-  }
-}
-
-@media screen and (max-width: 1199.98px) {
-  section.about .sub-title {
-    font-size: 35px;
-  }
 }
 
 section.about p {
@@ -449,18 +485,12 @@ section.about .about-image {
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 991.98px) {
-  section.about .about-image {
-    flex-direction: column;
-  }
-}
-
 section.about .about-image h5 {
   width: 295.4px;
   height: 136px;
   font-size: 53px;
   line-height: 68px;
-  font-weight: 500;
+  font-weight: 300;
   text-align: left;
   position: absolute;
   top: 65%;
@@ -473,30 +503,7 @@ section.about .about-image h5 {
 
 
 section.about .about-image h5 span {
-  font-weight: 300;
-}
-
-@media screen and (max-width: 991.98px) {
-  section.about .about-image h5 {
-    position: relative;
-    top: auto;
-    transform: translate(0);
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 1399.98px) {
-  section.about .about-image h5 {
-    font-size: 50px;
-  }
-}
-
-@media screen and (max-width: 1199.98px) {
-  section.about .about-image h5 {
-    font-size: 40px;
-    line-height: 40px;
-  }
+  font-weight: 500;
 }
 
 section.about .about-image img.africa {
@@ -531,6 +538,68 @@ section.about .about-box p {
   color: #FFFFFF;
   margin-top: 15px
 }
+
+/* Start Responsive */
+@media screen and (max-width: 1399.98px) {
+  section.about .sub-title {
+    font-size: 42px;
+  }
+
+  section.about .about-image h5 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  section.about .sub-title {
+    font-size: 35px;
+  }
+
+  section.about .about-image h5 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  section.about .title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  section.about .sub-title {
+    font-size: 24px;
+  }
+
+  section.about .about-image {
+    flex-direction: column;
+  }
+
+  section.about .about-image h5 {
+    position: relative;
+    top: auto;
+    transform: translate(0);
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  section.about .about-image h5 span:last-child {
+    font-weight: 300;
+  }
+
+  section.about .about-image h5 span:first-child {
+    font-weight: 700;
+  }
+
+  section.about p {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* End Responsive */
 
 /* End About Section */
 
@@ -594,6 +663,82 @@ section.philosophy .box-icon {
   width: 50%;
   text-align: center;
 }
+
+/* Start Responsive */
+@media screen and (max-width: 1199.98px) {
+  section.philosophy .images-group img {
+    transform: scale(0.8)
+  }
+
+  section.philosophy .images-group img:first-child {
+    margin-left: -190px;
+    z-index: 2;
+  }
+
+}
+
+@media screen and (max-width: 991.98px) {
+  section.philosophy .row:first-of-type {
+    flex-direction: column-reverse;
+  }
+
+  section.philosophy .images-group ~ p {
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  section.philosophy .philosophy-content h6 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+  }
+
+  section.philosophy .philosophy-content h5 {
+    max-width: 351.13px;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 46px;
+  }
+
+  section.philosophy .images-group {
+    flex-direction: column-reverse;
+  }
+
+  section.philosophy .images-group img:first-child {
+    margin-left: 0;
+    margin-top: -200px;
+    align-self: flex-end;
+  }
+
+  section.philosophy .box-left {
+    flex-grow: 1;
+  }
+
+  section.philosophy .box-left h6 {
+    font-size: 30px;
+  }
+
+  section.philosophy .box-left p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  section.philosophy .box-icon {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  section.philosophy .box-icon img {
+    width: 120px;
+  }
+
+}
+
+/* End Responsive */
 
 /* End Philosophy Section  */
 
@@ -674,6 +819,36 @@ section.philosophy .box-icon {
   border-radius: 0 0 10px 10px;
 }
 
+/* Start Responsive */
+@media screen and (max-width: 991.98px) {
+  .faq .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .faq .sub-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .faq .accordion-button {
+    height: 50px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .faq .accordion-button::before {
+    transform: translateY(-50%) scale(.8);
+  }
+
+  .faq .accordion-body {
+    font-size: 12px;
+  }
+
+}
+
+/* End Responsive */
+
 /* End FAQ Section */
 
 /* Start News Letter Section  */
@@ -709,6 +884,25 @@ section.philosophy .box-icon {
 .news_letter .form-control::placeholder {
   color: #FFFFFF;
 }
+
+/* Start Responsive */
+@media screen and (max-width: 991.98px) {
+  .news_letter h5 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .news_letter .bg-white {
+    padding-right: 3rem !important;
+  }
+
+  .news_letter .form-control {
+    font-size: 14px;
+
+  }
+}
+
+/* End Responsive */
 
 /* End News Letter Section  */
 
@@ -778,5 +972,45 @@ footer .copyright p {
   letter-spacing: 0.06em;
 }
 
+/* Start Responsive */
+@media screen and (max-width: 991.98px) {
+  footer .footer-left p {
+    font-size: 16px;
+    line-height: 20px;
+
+  }
+
+  footer .footer-center::after {
+    display: none;
+  }
+
+  footer .footer-center {
+    padding-left: 0px;
+  }
+
+  footer h6 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+
+  footer .footer-center li a,
+  footer .footer-right li {
+    font-size: 14px;
+    line-height: 13px;
+  }
+
+  footer .copyright p {
+    font-size: 14px;
+  }
+
+  footer .copyright .symbol {
+    font-size: 1.7rem;
+    margin-right: 7px;
+  }
+
+}
+
+/* End Responsive */
 
 /* End Footer */
