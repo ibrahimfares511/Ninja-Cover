@@ -119,11 +119,11 @@ main {
 
 @media screen and (max-width: 991.98px) {
   .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
     border-radius: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 20px;
+    z-index: 9;
   }
 }
 
@@ -142,10 +142,11 @@ section.step-form {
 section.step-form .step-box {
   width: 100%;
   height: 358.73px;
+  margin: auto;
   display: flex;
   align-items: start;
   justify-content: center;
-  border-radius: 15px;
+  border-radius: 30px;
   overflow: hidden;
 }
 
@@ -709,5 +710,73 @@ section.philosophy .box-icon {
   color: #FFFFFF;
 }
 
-
 /* End News Letter Section  */
+
+/* Start Footer */
+footer h6 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0.06em;
+  margin-bottom: 30px;
+
+}
+
+footer .footer-left img {
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+
+footer .footer-left p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  padding: 10px;
+}
+
+footer .footer-center {
+  position: relative;
+  padding-left: 30px;
+}
+
+footer .footer-center::after {
+  content: "";
+  position: absolute;
+  top: 53%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 65%;
+  background: transparent;
+  border-left: 1px solid #D6D6D6;
+  border-right: 1px solid #D6D6D6
+}
+
+footer .footer-center li a,
+footer .footer-right li {
+  display: block;
+  text-decoration: none;
+  color: #181A51;
+  padding: 10px 0;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0.06em;
+}
+
+footer .copyright .symbol {
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-right: 15px;
+}
+
+footer .copyright p {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+
+
+/* End Footer */
