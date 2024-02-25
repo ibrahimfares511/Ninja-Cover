@@ -50,3 +50,5 @@ const goToStep = (stepNumber) => {
 previousButton.onclick = goPrevious;
 nextButton.onclick = goNext;
 endStepButton.onclick = submitted;
+
+goToStep(currentStep);

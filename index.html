@@ -76,26 +76,158 @@
       <div class="container">
         <div class="step-box">
           <div class="step-content">
-
-            <div class="step-content-slides">
-              <div class="step-content-box step-1 show">
-                <h3>Find Insurance</h3>
-                <h3>In Africa</h3>
-                <form class="center-flex flex-column mt-4 w-100 position-relative">
-                  <select>
-                    <option>Choose Your Country</option>
-                    <option value="EGY">Egypt</option>
-                    <option value="EGY">Egypt</option>
-                    <option value="EGY">Egypt</option>
-                  </select>
-                </form>
+            <form>
+              <div class="step-content-slides">
+                <div class="step-content-box step-1">
+                  <h3>Find Insurance</h3>
+                  <h3>In Africa</h3>
+                  <div class="center-flex flex-column mt-4 position-relative">
+                    <div class="position-relative select_form w-100">
+                      <select>
+                        <option value="null">Choose Your Country</option>
+                        <option value="EGY">Egypt</option>
+                        <option value="EGY">Egypt</option>
+                        <option value="EGY">Egypt</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-content-box step-2">
+                  <h4>Choose Insurance Type</h4>
+                  <div>
+                    <div class="form-group center-flex">
+                      <div>
+                        <input type="checkbox" name="insurance_type" value="individual_medical"
+                          id="individual_medical" />
+                        <label for="individual_medical">
+                          <span>Individual Medical</span>
+                          <img src="./images/icons/Individual_Medical.png" alt="individual_medical"
+                            title="individual_medical">
+                        </label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="insurance_type" value="property" id="property" />
+                        <label for="property">
+                          <span>Property</span>
+                          <img src="./images/icons/property.png" alt="property" title="property">
+                        </label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="insurance_type" value="SME_medical" id="SME_medical" />
+                        <label for="SME_medical">
+                          <span>SME Medical</span>
+                          <img src="./images/icons/users.png" alt="SME_medical" title="SME_medical">
+                        </label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="insurance_type" value="motor" id="motor" />
+                        <label for="motor">
+                          <span>Motor</span>
+                          <img src="./images/icons/car.png" alt="motor" title="motor">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-content-box step-3">
+                  <h4>Medical Plan Ceiling</h4>
+                  <div class="center-flex flex-column position-relative">
+                    <div class="position-relative select_form w-100">
+                      <select>
+                        <option value="basic">Basic</option>
+                        <option value="basic">Basic</option>
+                        <option value="basic">Basic</option>
+                        <option value="basic">Basic</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-content-box step-4">
+                  <h4>Employee Details</h4>
+                  <div>
+                    <div class="form-group center-flex">
+                      <div>
+                        <div class="position-relative select_form w-100">
+                          <select>
+                            <option value="18/35">Age 18-35</option>
+                            <option value="36/45">Age 36-45</option>
+                            <option value="46/60">Age 46-60</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="position-relative select_form w-100">
+                          <select>
+                            <option value="18/35">Age 18-35</option>
+                            <option value="36/45">Age 36-45</option>
+                            <option value="46/60">Age 46-60</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div>
+                        <input type="number" name="employee" class="form-control" placeholder="Number Of Employee" />
+                      </div>
+                      <div>
+                        <input type="number" name="employee" class="form-control" placeholder="Number Of Employee" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-content-box step-5">
+                  <h4>Policy Coverages</h4>
+                  <div>
+                    <div class="form-group center-flex">
+                      <div>
+                        <input type="radio" name="policy_coverages" value="in_patient" id="in_patient" />
+                        <label for="in_patient">
+                          <span>In-Patient</span>
+                          <span class="circle"></span>
+                        </label>
+                      </div>
+                      <div>
+                        <input type="radio" name="policy_coverages" value="out_patient" id="out_patient" />
+                        <label for="out_patient">
+                          <span>Out-Patient</span>
+                          <span class="circle"></span>
+                        </label>
+                      </div>
+                      <div>
+                        <input type="radio" name="policy_coverages" value="chronic" id="chronic" />
+                        <label for="chronic">
+                          <span>Chronic & Pre-existing</span>
+                          <span class="circle"></span>
+                        </label>
+                      </div>
+                      <div>
+                        <input type="radio" name="policy_coverages" value="dental" id="dental" />
+                        <label for="dental">
+                          <span>Dental & Optical</span>
+                          <span class="circle"></span>
+                        </label>
+                      </div>
+                      <div>
+                        <input type="radio" name="policy_coverages" value="maternity" id="maternity" />
+                        <label for="maternity">
+                          <span>Maternity</span>
+                          <span class="circle"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-content-box step-6">
+                  <h4>Personal Details</h4>
+                  <div>
+                    <div>
+                      <input type="email" name="email" class="form-control mt-2" placeholder="Email" />
+                    </div>
+                    <div>
+                      <input type="text" name="promo_code" class="form-control mt-2" placeholder="Promo Code" />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="step-content-box step-2">Step-2</div>
-              <div class="step-content-box step-3">Step-3</div>
-              <div class="step-content-box step-4">Step-4</div>
-              <div class="step-content-box step-5">Step-5</div>
-              <div class="step-content-box step-6">Step-6</div>
-            </div>
+            </form>
 
             <div class="button-group center-flex gap-1">
               <button class="main-outline-button center-flex hidden" id="prev_step" style="width: 55px;">
@@ -114,7 +246,6 @@
               <span></span>
               <span></span>
             </div>
-
           </div>
           <div class="step-bg center-flex">
             <div class="icons center-flex">
@@ -151,7 +282,333 @@
 
   </main>
   <!-- End Header Section -->
-  <main></main>
+
+  <!-- Start About Section -->
+  <section class="about">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-6">
+          <h2 class="gradient-text title">About Us</h2>
+          <h3 class="sub-title">ninja cover overview</h3>
+          <p>At Ninja Cover, we are dedicated to providing you with innovative and tailored insurance solutions. Our
+            digital platform is designed to offer you a seamless and convenient experience in protecting what matters
+            most to you. Since our inception, Ninja Cover has been committed to revolutionizing the insurance industry.
+            With a history of innovation, we have consistently strived to make insurance accessible to everyone
+            We specialize in offering unique insurance products that optimize the carrier experience and exceed customer
+            expectations. With our recommendations, you can ensure that you have the right coverage for your specific
+            requirements..</p>
+          <div class="about-buttons">
+            <button class="main-outline-button">Our Locations</button>
+            <button class="main-solid-button d-none d-lg-block">
+              <img src="./images/white-brokerslink.png" alt="brokerslink">
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 text-end position-relative about-image">
+          <img src="./images/africa.png" alt="Africa" class="africa">
+          <img src="./images/black-brokerslink.png" alt="brokerslink" class="d-block d-lg-none">
+          <h5>38 <span>African</span> Partners</h5>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-4 mt-3">
+          <div class="about-box">
+            <h5>underwriting <br /> excellence</h5>
+            <p>Our Underwriting Ninja Cover employs advanced tech and algorithms to assess your unique needs, ensuring
+              personalized insurance recommendations through a seamless process.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-3">
+          <div class="about-box">
+            <h5>insurance <br /> aggregator</h5>
+            <p>Access our Insurance Aggregator to compare and select the best medical, motor, and home insurance. We
+              consolidate options, empowering you with diverse choices in the market.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-3">
+          <div class="about-box">
+            <h5> digital <br /> insurance</h5>
+            <p>Ninja Cover specializes in innovative insurance products, exceeding customer expectations. Our values of
+              transparency, reliability, and customer-centricity ensure the right coverage for your specific needs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <hr class="w-50 mx-auto my-5" style="border-color: #B2B2B2; border-width: 2px;" />
+
+  <!-- Start Philosophy Section -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 mt-5 text-start position-relative">
+          <div class="images-group">
+            <img src="./images/philosophy-1.png" alt="philosophy-1" class="">
+            <img src="./images/philosophy-2.png" alt="philosophy-2" class="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="philosophy-content">
+            <h6>Defining Who We Are</h6>
+            <h5>OUR CORE PHILOSOPHY</h5>
+            <p>Transparency, reliability, customer-centricity, simplifying insurance for you</p>
+          </div>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-12 d-flex align-items-center justify-content-between my-4">
+          <div class="box-left">
+            <h6>CORE VALUES</h6>
+            <p>At Ninja Cover, we stand for transparency, reliability, and customer-centricity. We believe in putting
+              our customers' needs first.</p>
+          </div>
+          <div class="box-icon">
+            <img src="./images/check.png" alt="core_values">
+          </div>
+        </div>
+        <div class="col-12 d-flex align-items-center justify-content-between my-4">
+          <div class="box-left">
+            <h6>OUR PURPOSE</h6>
+            <p>Our purpose is simple: to make insurance hassle-free. We aim to simplify the insurance process, making it
+              easy for you to find the coverage you need.</p>
+          </div>
+          <div class="box-icon">
+            <img src="./images/hart.png" alt="our_purpose">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Philosophy Section -->
+
+  <hr class="w-50 mx-auto my-5" style="border-color: #B2B2B2; border-width: 2px;" />
+
+  <!-- Start FAQ Section-->
+  <section class="faq">
+    <div class="container">
+      <h4 class="title">Frequently Asked Questions</h4>
+      <h5 class="sub-title">GET EVERY SINGLE ANSWER THERE IF YOU WANT</h5>
+
+      <div class="accordion" id="faq">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+              What is a digital insurance aggregator?
+            </button>
+          </h2>
+          <div id="collapse-1" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              This Is Body
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+              How does the aggregator work for SME medical, Individual medical, motor, and home insurance?
+            </button>
+          </h2>
+          <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+              Why should I use a digital insurance aggregator?
+            </button>
+          </h2>
+          <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+              Is it secure to provide my personal information on the platform?
+            </button>
+          </h2>
+          <div id="collapse-4" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+              Can I purchase insurance directly through the aggregator platform?
+            </button>
+          </h2>
+          <div id="collapse-5" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+              Do I pay extra for using the aggregator service?
+            </button>
+          </h2>
+          <div id="collapse-6" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+              What types of insurance coverage are available through the aggregator for SME medical, Individual medical,
+              motor, and home insurance?
+            </button>
+          </h2>
+          <div id="collapse-7" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+              What types of insurance coverage are available through the aggregator for SME medical, Individual medical,
+              motor, and home insurance?
+            </button>
+          </h2>
+          <div id="collapse-8" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+              How quickly can I get my insurance policy after purchasing it through the aggregator?
+            </button>
+          </h2>
+          <div id="collapse-9" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
+              Can I get customer support or assistance if I have questions during the process?
+            </button>
+          </h2>
+          <div id="collapse-10" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-11" aria-expanded="false" aria-controls="collapse-11">
+              What if I need to make changes or updates to my insurance policy later on?
+            </button>
+          </h2>
+          <div id="collapse-11" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+              <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+  <!-- ENd FAQ Section-->
+
+  <hr class="w-50 mx-auto my-5" style="border-color: #B2B2B2; border-width: 2px;" />
+
+  <!-- Start News Letter Section -->
+  <section class="news_letter">
+    <div class="container">
+      <div class="d-flex align-items-center py-3 px-5 bg-white rounded-4">
+        <h5>JOIN OUR NEWS-LETTER</h5>
+        <input type="email" name="news_letter" class="form-control" placeholder="Enter Your E-Mail" />
+      </div>
+    </div>
+  </section>
+  <!-- End News Letter Section -->
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
