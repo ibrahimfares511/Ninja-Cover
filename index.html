@@ -84,11 +84,11 @@
                   <h3 class="d-none d-lg-block">In Africa</h3>
                   <div class="center-flex flex-column mt-4 position-relative">
                     <div class="position-relative select_form w-100">
-                      <select>
-                        <option value="null">Choose Your Country</option>
-                        <option value="EGY">Egypt</option>
-                        <option value="EGY">Egypt</option>
-                        <option value="EGY">Egypt</option>
+                      <select id="country">
+                        <option value="null" selected disabled>Choose Your Country</option>
+                        <option value="egypt">Egypt</option>
+                        <option value="algeria">Algeria</option>
+                        <option value="morocco">Morocco</option>
                       </select>
                     </div>
                   </div>
@@ -98,8 +98,7 @@
                   <div>
                     <div class="form-group center-flex">
                       <div>
-                        <input type="checkbox" name="insurance_type" value="individual_medical"
-                          id="individual_medical" />
+                        <input type="radio" name="insurance_type" value="individual_medical" id="individual_medical" />
                         <label for="individual_medical">
                           <span>Individual Medical</span>
                           <img src="./images/icons/Individual_Medical.png" alt="individual_medical"
@@ -107,21 +106,21 @@
                         </label>
                       </div>
                       <div>
-                        <input type="checkbox" name="insurance_type" value="property" id="property" />
+                        <input type="radio" name="insurance_type" value="property" id="property" />
                         <label for="property">
                           <span>Property</span>
                           <img src="./images/icons/property.png" alt="property" title="property">
                         </label>
                       </div>
                       <div>
-                        <input type="checkbox" name="insurance_type" value="SME_medical" id="SME_medical" />
+                        <input type="radio" name="insurance_type" value="SME_medical" id="SME_medical" />
                         <label for="SME_medical">
                           <span>SME Medical</span>
                           <img src="./images/icons/users.png" alt="SME_medical" title="SME_medical">
                         </label>
                       </div>
                       <div>
-                        <input type="checkbox" name="insurance_type" value="motor" id="motor" />
+                        <input type="radio" name="insurance_type" value="motor" id="motor" />
                         <label for="motor">
                           <span>Motor</span>
                           <img src="./images/icons/car.png" alt="motor" title="motor">
@@ -130,51 +129,49 @@
                     </div>
                   </div>
                 </div>
-                <div class="step-content-box step-3">
-                  <h4>Medical Plan Ceiling</h4>
-                  <div class="center-flex flex-column position-relative">
-                    <div class="position-relative select_form w-100">
-                      <select>
-                        <option value="basic">Basic</option>
-                        <option value="basic">Basic</option>
-                        <option value="basic">Basic</option>
-                        <option value="basic">Basic</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="step-content-box step-4">
-                  <h4>Employee Details</h4>
-                  <div>
-                    <div class="form-group center-flex">
-                      <div>
-                        <div class="position-relative select_form w-100">
-                          <select>
-                            <option value="18/35">Age 18-35</option>
-                            <option value="36/45">Age 36-45</option>
-                            <option value="46/60">Age 46-60</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="position-relative select_form w-100">
-                          <select>
-                            <option value="18/35">Age 18-35</option>
-                            <option value="36/45">Age 36-45</option>
-                            <option value="46/60">Age 46-60</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div>
-                        <input type="number" name="employee" class="form-control" placeholder="Number Of Employee" />
-                      </div>
-                      <div>
-                        <input type="number" name="employee" class="form-control" placeholder="Number Of Employee" />
+                <div class="step-content-box step-3 flex-row">
+                  <div class="plan-ceiling">
+                    <h4>Medical Plan Ceiling</h4>
+                    <div class="center-flex flex-column position-relative">
+                      <div class="position-relative select_form w-100">
+                        <select>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                        </select>
                       </div>
                     </div>
                   </div>
+                  <div class="employee-details">
+                    <h4>Employee Details</h4>
+                    <div>
+                      <div class="form-group center-flex flex-column">
+                        <div class="w-100">
+                          <div class="position-relative select_form w-100">
+                            <select>
+                              <option value="18/35">Age 18-35</option>
+                              <option value="36/45">Age 36-45</option>
+                              <option value="46/60">Age 46-60</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="w-100">
+                          <input type="number" name="employee" class="form-control" placeholder="Number Of Employee" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="personal-details">
+                    <h4>Personal Details</h4>
+                    <div class="d-flex gap-2">
+                      <input type="email" name="email" class="form-control" placeholder="Email" />
+                      <input type="text" name="promo_code" class="form-control" placeholder="Promo Code" />
+                    </div>
+                  </div>
                 </div>
-                <div class="step-content-box step-5">
+
+                <!-- <div class="step-content-box step-5">
                   <h4>Policy Coverages</h4>
                   <div>
                     <div class="form-group center-flex">
@@ -215,18 +212,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="step-content-box step-6">
-                  <h4>Personal Details</h4>
-                  <div>
-                    <div>
-                      <input type="email" name="email" class="form-control mt-2" placeholder="Email" />
-                    </div>
-                    <div>
-                      <input type="text" name="promo_code" class="form-control mt-2" placeholder="Promo Code" />
-                    </div>
-                  </div>
-                </div>
+                </div> -->
+
               </div>
             </form>
 
@@ -243,13 +230,14 @@
               <span class="active"></span>
               <span></span>
               <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
             </div>
           </div>
 
           <div class="step-bg center-flex">
+
+            <div class="step-image">
+              <img src="./images/countries/step_bg.jpg" alt="africa">
+            </div>
 
             <div class="icons center-flex d-none d-lg-flex">
               <div class="box-icon">

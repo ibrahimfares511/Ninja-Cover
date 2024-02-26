@@ -5,6 +5,11 @@ const nextButton = document.querySelector("#next_step");
 const previousButton = document.querySelector("#prev_step");
 const endStepButton = document.querySelector("#end_step");
 const indicators = document.querySelectorAll(".indicator span");
+const countrySelect = document.querySelector("#country");
+const countryImg = document.querySelector(".step-image img");
+const insuranceType = document.querySelectorAll(
+	'input[name="insurance_type"][type="radio"]'
+);
 let currentStep = 1;
 
 const goNext = (e) => {
@@ -47,8 +52,23 @@ const goToStep = (stepNumber) => {
 	}
 };
 
+const changeImag = (country) => {
+	countryImg.setAttribute("src", `./images/countries/${country}.jpg`);
+};
+
 previousButton.onclick = goPrevious;
 nextButton.onclick = goNext;
 endStepButton.onclick = submitted;
+
+countrySelect.addEventListener("change", function (e) {
+	changeImag(e.target.value);
+	goNext(e);
+});
+
+insuranceType.forEach((insurance) => {
+	insurance.addEventListener("change", function (e) {
+		goNext(e);
+	});
+});
 
 goToStep(currentStep);
