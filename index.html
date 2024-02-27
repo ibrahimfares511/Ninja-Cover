@@ -78,59 +78,59 @@
         <div class="step-box rounded-4">
 
           <div class="step-content">
-            <form>
-              <div class="step-content-slides">
-                <div class="step-content-box step-1">
-                  <h3 class="d-none d-lg-block mb-0">Find Insurance</h3>
-                  <h3 class="d-none d-lg-block mb-0">In Africa</h3>
-                  <div class="center-flex flex-column mt-4 position-relative">
-                    <div class="position-relative select_form w-100">
-                      <select id="country">
-                        <option value="null" selected disabled>Choose Your Country</option>
-                        <option value="egypt">Egypt</option>
-                        <option value="algeria">Algeria</option>
-                        <option value="morocco">Morocco</option>
-                      </select>
+            <div class="step-content-slides">
+              <div class="step-content-box step-1">
+                <h3 class="d-none d-lg-block mb-0">Find Insurance</h3>
+                <h3 class="d-none d-lg-block mb-0">In Africa</h3>
+                <div class="center-flex flex-column mt-4 position-relative">
+                  <div class="position-relative select_form w-100">
+                    <select id="country">
+                      <option value="null" selected disabled>Choose Your Country</option>
+                      <option value="egypt">Egypt</option>
+                      <option value="algeria">Algeria</option>
+                      <option value="morocco">Morocco</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="step-content-box step-2">
+                <h4>Choose Insurance Type</h4>
+                <div>
+                  <div class="form-group center-flex">
+                    <div>
+                      <input type="radio" name="insurance_type" value="individual_medical" id="individual_medical" />
+                      <label for="individual_medical">
+                        <span>Individual Medical</span>
+                        <img src="./images/icons/Individual_Medical.png" alt="individual_medical"
+                          title="individual_medical">
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="insurance_type" value="property" id="property" />
+                      <label for="property">
+                        <span>Property</span>
+                        <img src="./images/icons/property.png" alt="property" title="property">
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="insurance_type" value="SME_medical" id="SME_medical" />
+                      <label for="SME_medical">
+                        <span>SME Medical</span>
+                        <img src="./images/icons/users.png" alt="SME_medical" title="SME_medical">
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="insurance_type" value="motor" id="motor" />
+                      <label for="motor">
+                        <span>Motor</span>
+                        <img src="./images/icons/car.png" alt="motor" title="motor">
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div class="step-content-box step-2">
-                  <h4>Choose Insurance Type</h4>
-                  <div>
-                    <div class="form-group center-flex">
-                      <div>
-                        <input type="radio" name="insurance_type" value="individual_medical" id="individual_medical" />
-                        <label for="individual_medical">
-                          <span>Individual Medical</span>
-                          <img src="./images/icons/Individual_Medical.png" alt="individual_medical"
-                            title="individual_medical">
-                        </label>
-                      </div>
-                      <div>
-                        <input type="radio" name="insurance_type" value="property" id="property" />
-                        <label for="property">
-                          <span>Property</span>
-                          <img src="./images/icons/property.png" alt="property" title="property">
-                        </label>
-                      </div>
-                      <div>
-                        <input type="radio" name="insurance_type" value="SME_medical" id="SME_medical" />
-                        <label for="SME_medical">
-                          <span>SME Medical</span>
-                          <img src="./images/icons/users.png" alt="SME_medical" title="SME_medical">
-                        </label>
-                      </div>
-                      <div>
-                        <input type="radio" name="insurance_type" value="motor" id="motor" />
-                        <label for="motor">
-                          <span>Motor</span>
-                          <img src="./images/icons/car.png" alt="motor" title="motor">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="step-content-box step-3 flex-row">
+              </div>
+              <div class="step-content-box step-3 flex-row">
+                <form class="individual_medical-form type-form">
                   <div class="plan-ceiling">
                     <h4>Medical Plan Ceiling</h4>
                     <div class="center-flex flex-column position-relative">
@@ -170,9 +170,161 @@
                       <input type="text" name="promo_code" class="form-control" placeholder="Promo Code" />
                     </div>
                   </div>
-                </div>
+                  <div class="button-form d-flex gap-1 w-100" style="margin-top: 32px;">
+                    <button class="main-outline-button center-flex hidden prev-step" style="width: 55px;">
+                      <img src="./images/icons/Right_Arrow.png" alt="previous" title="previous" />
+                    </button>
+                    <button type="submit" class="main-solid-button center-flex flex-grow-1">Search Individual
+                      Medical</button>
+                  </div>
+                </form>
 
-                <!-- <div class="step-content-box step-5">
+                <form class="property-form type-form">
+                  <div class="plan-ceiling">
+                    <h4>Medical Plan Ceiling</h4>
+                    <div class="center-flex flex-column position-relative">
+                      <div class="position-relative select_form w-100">
+                        <select>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-details">
+                    <h4>Employee Details</h4>
+                    <div>
+                      <div class="form-group center-flex flex-column">
+                        <div class="w-100">
+                          <div class="position-relative select_form w-100">
+                            <select>
+                              <option value="18/35">Age 18-35</option>
+                              <option value="36/45">Age 36-45</option>
+                              <option value="46/60">Age 46-60</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="w-100">
+                          <input type="number" name="employee" class="form-control" placeholder="Number Of Employee" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="personal-details">
+                    <h4>Personal Details</h4>
+                    <div class="d-flex gap-2">
+                      <input type="email" name="email" class="form-control" placeholder="Email" />
+                      <input type="text" name="promo_code" class="form-control" placeholder="Promo Code" />
+                    </div>
+                  </div>
+                  <div class="button-form d-flex gap-1 w-100" style="margin-top: 32px;">
+                    <button class="main-outline-button center-flex hidden prev-step" style="width: 55px;">
+                      <img src="./images/icons/Right_Arrow.png" alt="previous" title="previous" />
+                    </button>
+                    <button type="submit" class="main-solid-button center-flex flex-grow-1">Search Property</button>
+                  </div>
+                </form>
+
+                <form class="SME_medical-form type-form">
+                  <div class="plan-ceiling">
+                    <h4>Medical Plan Ceiling</h4>
+                    <div class="center-flex flex-column position-relative">
+                      <div class="position-relative select_form w-100">
+                        <select>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-details">
+                    <h4>Employee Details</h4>
+                    <div>
+                      <div class="form-group center-flex flex-column">
+                        <div class="w-100">
+                          <div class="position-relative select_form w-100">
+                            <select>
+                              <option value="18/35">Age 18-35</option>
+                              <option value="36/45">Age 36-45</option>
+                              <option value="46/60">Age 46-60</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="w-100">
+                          <input type="number" name="employee" class="form-control" placeholder="Number Of Employee" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="personal-details">
+                    <h4>Personal Details</h4>
+                    <div class="d-flex gap-2">
+                      <input type="email" name="email" class="form-control" placeholder="Email" />
+                      <input type="text" name="promo_code" class="form-control" placeholder="Promo Code" />
+                    </div>
+                  </div>
+                  <div class="button-form d-flex gap-1 w-100" style="margin-top: 32px;">
+                    <button class="main-outline-button center-flex hidden prev-step" style="width: 55px;">
+                      <img src="./images/icons/Right_Arrow.png" alt="previous" title="previous" />
+                    </button>
+                    <button type="submit" class="main-solid-button center-flex flex-grow-1">Search SME Medical</button>
+                  </div>
+                </form>
+
+                <form class="motor-form type-form">
+                  <div class="plan-ceiling">
+                    <h4>Medical Plan Ceiling</h4>
+                    <div class="center-flex flex-column position-relative">
+                      <div class="position-relative select_form w-100">
+                        <select>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                          <option value="basic">Basic</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="employee-details">
+                    <h4>Employee Details</h4>
+                    <div>
+                      <div class="form-group center-flex flex-column">
+                        <div class="w-100">
+                          <div class="position-relative select_form w-100">
+                            <select>
+                              <option value="18/35">Age 18-35</option>
+                              <option value="36/45">Age 36-45</option>
+                              <option value="46/60">Age 46-60</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="w-100">
+                          <input type="number" name="employee" class="form-control" placeholder="Number Of Employee" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="personal-details">
+                    <h4>Personal Details</h4>
+                    <div class="d-flex gap-2">
+                      <input type="email" name="email" class="form-control" placeholder="Email" />
+                      <input type="text" name="promo_code" class="form-control" placeholder="Promo Code" />
+                    </div>
+                  </div>
+                  <div class="button-form d-flex gap-1 w-100" style="margin-top: 32px;">
+                    <button class="main-outline-button center-flex hidden prev-step" style="width: 55px;">
+                      <img src="./images/icons/Right_Arrow.png" alt="previous" title="previous" />
+                    </button>
+                    <button type="submit" class="main-solid-button center-flex flex-grow-1">Search motor</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- <div class="step-content-box step-5">
                   <h4>Policy Coverages</h4>
                   <div>
                     <div class="form-group center-flex">
@@ -215,11 +367,10 @@
                   </div>
                 </div> -->
 
-              </div>
-            </form>
+            </div>
 
-            <div class="button-group center-flex gap-1">
-              <button class="main-outline-button center-flex hidden" id="prev_step" style="width: 55px;">
+            <div class="button-group step-buttons center-flex gap-1">
+              <button class="main-outline-button center-flex hidden prev-step" style="width: 55px;">
                 <img src="./images/icons/Right_Arrow.png" alt="previous" title="previous" />
               </button>
               <button class="main-solid-button center-flex flex-grow-1" id="next_step">Proceed Next</button>
@@ -340,16 +491,16 @@
   <hr class="w-50 mx-auto my-5" style="border-color: #B2B2B2; border-width: 2px;" />
 
   <!-- Start Philosophy Section -->
-  <section class="philosophy">
+  <section class="philosophy d-block d-lg-none">
     <div class="container">
 
-      <div class="row align-items-center mb-5">
+      <div class="row align-items-center ">
         <div class="col-lg-6 mt-2 text-start position-relative">
           <div class="images-group">
             <img src="./images/philosophy-1.png" alt="philosophy-1" class="">
             <img src="./images/philosophy-2.png" alt="philosophy-2" class="">
           </div>
-          <p class="d-block d-lg-none mx-auto">Transparency, reliability, customer-centricity, simplifying
+          <p class="d-block d-lg-none mx-auto mb-0">Transparency, reliability, customer-centricity, simplifying
             insurance for you
           </p>
         </div>
@@ -395,7 +546,7 @@
   </section>
   <!-- End Philosophy Section -->
 
-  <hr class="w-50 mx-auto my-5" style="border-color: #B2B2B2; border-width: 2px;" />
+  <hr class="w-50 mx-auto my-5 d-block d-lg-none" style="border-color: #B2B2B2; border-width: 2px;" />
 
   <!-- Start FAQ Section-->
   <section class="faq">

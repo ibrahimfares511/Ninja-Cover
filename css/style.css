@@ -84,7 +84,7 @@ main {
 
 /* Start Navbar Style */
 .navbar-brand img {
-	width: 330px;
+	width: 180px;
 }
 
 .navbar-nav .nav-link,
@@ -130,19 +130,13 @@ main {
 	}
 
 	.navbar-brand img {
-		width: auto;
+		width: 90px;
 	}
 }
 
 @media (min-width: 992px) {
 	.navbar-collapse {
 		margin-top: 15px;
-	}
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-	.navbar-brand img {
-		width: 260px;
 	}
 }
 
@@ -202,7 +196,8 @@ section.step-form .step-box .step-content .step-content-slides {
 	height: 220px;
 }
 
-section.step-form .step-box .step-content .step-content-box {
+section.step-form .step-box .step-content .step-content-box,
+section.step-form .step-box .step-content .step-content-box form {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -216,7 +211,17 @@ section.step-form .step-box .step-content .step-content-box {
 	transition: transform 0.5s ease-in-out;
 }
 
-section.step-form .step-box .step-content .step-content-box.show {
+section.step-form .step-box .step-content .step-content-box form {
+	display: none;
+}
+
+section.step-form .step-box .step-content .step-content-box.show form.show {
+	display: flex;
+	flex-direction: row;
+}
+
+section.step-form .step-box .step-content .step-content-box.show,
+section.step-form .step-box .step-content .step-content-box.show form {
 	position: relative;
 	transform: scale(1);
 	opacity: 1;
@@ -282,32 +287,18 @@ section.step-form .step-box .step-content input[type="radio"] + label {
 	transition: border 0.3s ease-in-out;
 }
 
-section.step-form
-	.step-box
-	.step-content
-	input[type="checkbox"]:checked
-	~ label,
+section.step-form .step-box .step-content input[type="checkbox"]:checked ~ label,
 section.step-form .step-box .step-content input[type="radio"]:checked ~ label {
 	border-color: var(--main-color);
 }
 
 section.step-form .step-box .step-content input[type="checkbox"] + label span,
-section.step-form
-	.step-box
-	.step-content
-	input[type="radio"]
-	+ label
-	span:first-child {
+section.step-form .step-box .step-content input[type="radio"] + label span:first-child {
 	font-size: 12px;
 	color: var(--muted-text);
 }
 
-section.step-form
-	.step-box
-	.step-content
-	input[type="radio"]
-	+ label
-	span:last-child {
+section.step-form .step-box .step-content input[type="radio"] + label span:last-child {
 	width: 15px;
 	height: 15px;
 	background: #fff;
@@ -316,12 +307,7 @@ section.step-form
 	transition: background 0.3s ease-in-out;
 }
 
-section.step-form
-	.step-box
-	.step-content
-	input[type="radio"]:checked
-	~ label
-	span:last-child {
+section.step-form .step-box .step-content input[type="radio"]:checked ~ label span:last-child {
 	background: var(--main-color);
 	border-color: #ffffff;
 }
@@ -432,6 +418,7 @@ section.step-form .step-box .step-bg .icons {
 
 /* Start Responsive */
 @media screen and (max-width: 575.98px) {
+
 	.step-content-box .plan-ceiling,
 	.step-content-box .employee-details {
 		flex-grow: 1;
@@ -548,10 +535,8 @@ section.about .about-buttons button {
 }
 
 section.about .about-buttons button:first-child {
-	background: linear-gradient(180deg, var(--main-bg), var(--main-bg))
-			padding-box,
-		linear-gradient(180deg, var(--main-color) 0%, var(--main-dark-color) 100%)
-			border-box;
+	background: linear-gradient(180deg, var(--main-bg), var(--main-bg)) padding-box,
+		linear-gradient(180deg, var(--main-color) 0%, var(--main-dark-color) 100%) border-box;
 	color: var(--main-dark-color);
 }
 
@@ -779,6 +764,7 @@ section.philosophy .box-icon img {
 		font-weight: 300;
 		width: 100%;
 		max-width: 320px;
+		text-align: center;
 	}
 
 	section.philosophy .philosophy-content h6 {
@@ -800,8 +786,8 @@ section.philosophy .box-icon img {
 	}
 
 	section.philosophy .images-group img {
-		width: 50%;
-		transform: scale(0.8);
+		width: 65%;
+		transform: scale(1);
 	}
 
 	section.philosophy .images-group img:first-child {
@@ -957,6 +943,7 @@ section.philosophy .box-icon img {
 	.faq .accordion-button {
 		padding-left: 50px;
 	}
+
 	.faq .accordion-button::before {
 		width: 40px;
 		height: 40px;
@@ -1023,10 +1010,12 @@ section.philosophy .box-icon img {
 	.news_letter .bg-white {
 		flex-direction: column;
 	}
+
 	.news_letter h5 {
 		font-size: 1.5rem;
 	}
 }
+
 /* End Responsive */
 
 /* End News Letter Section  */
@@ -1040,15 +1029,16 @@ footer h6 {
 }
 
 footer .footer-left img {
-	width: 200px;
+	width: 150px;
 }
 
 footer .footer-left p {
-	font-size: 1rem;
+	font-size: 0.8rem;
 	font-weight: 300;
 	line-height: 24px;
 	letter-spacing: 0.06em;
 	padding: 10px;
+	margin-top: 15px
 }
 
 footer .footer-center {
@@ -1075,7 +1065,7 @@ footer .footer-right li {
 	text-decoration: none;
 	color: #181a51;
 	padding: 10px 0;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	font-weight: 300;
 	line-height: 26px;
 	letter-spacing: 0.06em;

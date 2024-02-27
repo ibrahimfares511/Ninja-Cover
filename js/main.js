@@ -1,8 +1,9 @@
 "use strict";
 
 const stepBoxes = Array.from(document.querySelectorAll(".step-content-box"));
+const stepButtons = document.querySelector(".step-buttons");
 const nextButton = document.querySelector("#next_step");
-const previousButton = document.querySelector("#prev_step");
+const previousButton = document.querySelectorAll(".prev-step");
 const endStepButton = document.querySelector("#end_step");
 const indicators = document.querySelectorAll(".indicator span");
 const countrySelect = document.querySelector("#country");
@@ -10,6 +11,7 @@ const countryImg = document.querySelector(".step-image img");
 const insuranceType = document.querySelectorAll(
 	'input[name="insurance_type"][type="radio"]'
 );
+const typeForms = document.querySelectorAll(".type-form");
 let currentStep = 1;
 
 const goNext = (e) => {
@@ -24,11 +26,6 @@ const goPrevious = (e) => {
 	goToStep(currentStep);
 };
 
-const submitted = (e) => {
-	e.preventDefault();
-	console.log("Submitted");
-};
-
 const goToStep = (stepNumber) => {
 	let currentStepBox = document.querySelector(`.step-${stepNumber}`);
 	stepBoxes.forEach((box) => box.classList.remove("show"));
@@ -41,14 +38,14 @@ const goToStep = (stepNumber) => {
 	});
 
 	if (stepNumber === 1) {
-		previousButton.classList.add("hidden");
+		previousButton[previousButton.length - 1].classList.add("hidden");
 	} else if (stepNumber < stepBoxes.length) {
-		previousButton.classList.remove("hidden");
+		previousButton[previousButton.length - 1].classList.remove("hidden");
 		nextButton.classList.remove("hidden");
 		endStepButton.classList.add("hidden");
+		stepButtons.classList.remove("d-none");
 	} else if (stepNumber === stepBoxes.length) {
-		nextButton.classList.add("hidden");
-		endStepButton.classList.remove("hidden");
+		stepButtons.classList.add("d-none");
 	}
 };
 
@@ -56,9 +53,12 @@ const changeImag = (country) => {
 	countryImg.setAttribute("src", `./images/countries/${country}.jpg`);
 };
 
-previousButton.onclick = goPrevious;
+previousButton.forEach((btn) => {
+	btn.addEventListener("click", function (e) {
+		goPrevious(e);
+	});
+});
 nextButton.onclick = goNext;
-endStepButton.onclick = submitted;
 
 countrySelect.addEventListener("change", function (e) {
 	changeImag(e.target.value);
@@ -67,7 +67,14 @@ countrySelect.addEventListener("change", function (e) {
 
 insuranceType.forEach((insurance) => {
 	insurance.addEventListener("change", function (e) {
+		let type = e.target.value;
 		goNext(e);
+		typeForms.forEach((typeF) => {
+			typeF.classList.remove("show");
+			typeF.classList.contains(`${type}-form`)
+				? typeF.classList.add("show")
+				: false;
+		});
 	});
 });
 
