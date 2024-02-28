@@ -86,10 +86,33 @@
                   <div class="position-relative select_form w-100">
                     <select id="country">
                       <option value="null" selected disabled>Choose Your Country</option>
-                      <option value="egypt">Egypt</option>
                       <option value="algeria">Algeria</option>
+                      <option value="angola">Angola</option>
+                      <option value="benin">Benin</option>
+                      <option value="burkinafaso">Burkina Faso</option>
+                      <option value="cameroon">Cameroon</option>
+                      <option value="congo">Congo</option>
+                      <option value="congobrazzaville">Congo Brazzaville</option>
+                      <option value="ethiopia">Ethiopia</option>
+                      <option value="egypt">Egypt</option>
+                      <option value="gabon">Gabon</option>
+                      <option value="guinea">Guinea</option>
+                      <option value="ivorycoast">Ivory Coast</option>
+                      <option value="kenya">Kenya</option>
+                      <option value="liberia">Liberia</option>
+                      <option value="libya">Libya</option>
+                      <option value="madagascar">Madagascar</option>
+                      <option value="mali">Mali</option>
+                      <option value="mozambique">Mozambique</option>
                       <option value="morocco">Morocco</option>
+                      <option value="niger">Niger</option>
+                      <option value="sierraleone">Sierra Leone</option>
+                      <option value="southafrica">South Africa</option>
+                      <option value="swaziland">Swaziland</option>
+                      <option value="togo">Togo</option>
+                      <option value="tunisia">Tunisia</option>
                     </select>
+                    <span class="invalid-feedback">Please Choose Country</span>
                   </div>
                 </div>
               </div>
@@ -97,35 +120,41 @@
                 <h4>Choose Insurance Type</h4>
                 <div>
                   <div class="form-group center-flex">
-                    <div>
-                      <input type="radio" name="insurance_type" value="individual_medical" id="individual_medical" />
-                      <label for="individual_medical">
-                        <span>Individual Medical</span>
-                        <img src="./images/icons/Individual_Medical.png" alt="individual_medical"
-                          title="individual_medical">
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" name="insurance_type" value="property" id="property" />
-                      <label for="property">
-                        <span>Property</span>
-                        <img src="./images/icons/property.png" alt="property" title="property">
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" name="insurance_type" value="SME_medical" id="SME_medical" />
-                      <label for="SME_medical">
-                        <span>SME Medical</span>
-                        <img src="./images/icons/users.png" alt="SME_medical" title="SME_medical">
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" name="insurance_type" value="motor" id="motor" />
-                      <label for="motor">
-                        <span>Motor</span>
-                        <img src="./images/icons/car.png" alt="motor" title="motor">
-                      </label>
-                    </div>
+                    <form class="d-flex" id="type">
+                      <div class="form-group center-flex">
+                        <div>
+                          <input type="radio" name="insurance_type" value="individual_medical"
+                            id="individual_medical" />
+                          <label for="individual_medical">
+                            <span>Individual Medical</span>
+                            <img src="./images/icons/Individual_Medical.png" alt="individual_medical"
+                              title="individual_medical">
+                          </label>
+                        </div>
+                        <div>
+                          <input type="radio" name="insurance_type" value="property" id="property" />
+                          <label for="property">
+                            <span>Property</span>
+                            <img src="./images/icons/property.png" alt="property" title="property">
+                          </label>
+                        </div>
+                        <div>
+                          <input type="radio" name="insurance_type" value="SME_medical" id="SME_medical" />
+                          <label for="SME_medical">
+                            <span>SME Medical</span>
+                            <img src="./images/icons/users.png" alt="SME_medical" title="SME_medical">
+                          </label>
+                        </div>
+                        <div>
+                          <input type="radio" name="insurance_type" value="motor" id="motor" />
+                          <label for="motor">
+                            <span>Motor</span>
+                            <img src="./images/icons/car.png" alt="motor" title="motor">
+                          </label>
+                        </div>
+                      </div>
+                      <span class="invalid-feedback" id="insurance-error">Please Insurance Type</span>
+                    </form>
                   </div>
                 </div>
               </div>

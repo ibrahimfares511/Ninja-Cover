@@ -330,6 +330,10 @@ section.step-form .step-box .step-content select {
 	cursor: pointer;
 }
 
+section.step-form .step-box .step-content select.error {
+	border: 1px solid var(--bs-form-invalid-color);
+}
+
 section.step-form .step-box .step-content .select_form::after {
 	content: "";
 	width: 45px;

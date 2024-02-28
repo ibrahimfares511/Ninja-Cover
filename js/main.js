@@ -1,5 +1,6 @@
 "use strict";
 
+// const baseUrl = document.querySelector("#baseUrl").value;
 const stepBoxes = Array.from(document.querySelectorAll(".step-content-box"));
 const stepButtons = document.querySelector(".step-buttons");
 const nextButton = document.querySelector("#next_step");
@@ -12,18 +13,34 @@ const insuranceType = document.querySelectorAll(
 	'input[name="insurance_type"][type="radio"]'
 );
 const typeForms = document.querySelectorAll(".type-form");
+const insuranceError = document.querySelector("#insurance-error");
+
 let currentStep = 1;
+let check = false;
+let checkType = false;
 
 const goNext = (e) => {
 	e.preventDefault();
-	currentStep += 1;
-	goToStep(currentStep);
+	if (check) {
+		currentStep += 1;
+		goToStep(currentStep);
+		country.classList.remove("error");
+		country.nextElementSibling.classList.remove("d-block");
+		insuranceError.classList.remove("d-block");
+	} else if (country.value == "null") {
+		country.classList.add("error");
+		country.nextElementSibling.classList.add("d-block");
+	} else if (!checkType) {
+		insuranceError.classList.add("d-block");
+	}
+	check = false;
 };
 
 const goPrevious = (e) => {
 	e.preventDefault();
 	currentStep -= 1;
 	goToStep(currentStep);
+	check = true;
 };
 
 const goToStep = (stepNumber) => {
@@ -49,8 +66,8 @@ const goToStep = (stepNumber) => {
 	}
 };
 
-const changeImag = (country) => {
-	countryImg.setAttribute("src", `./images/countries/${country}.jpg`);
+const changeImage = (country) => {
+	// countryImg.setAttribute("src", `${baseUrl}images/countries/${country}.jpg`);
 };
 
 previousButton.forEach((btn) => {
@@ -61,13 +78,16 @@ previousButton.forEach((btn) => {
 nextButton.onclick = goNext;
 
 countrySelect.addEventListener("change", function (e) {
-	changeImag(e.target.value);
+	changeImage(e.target.value);
+	check = true;
 	goNext(e);
 });
 
 insuranceType.forEach((insurance) => {
 	insurance.addEventListener("change", function (e) {
 		let type = e.target.value;
+		check = true;
+		checkType = true;
 		goNext(e);
 		typeForms.forEach((typeF) => {
 			typeF.classList.remove("show");
