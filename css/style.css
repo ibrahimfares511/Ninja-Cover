@@ -130,7 +130,7 @@ main {
 	}
 
 	.navbar-brand img {
-		width: 90px;
+		width: 70px;
 	}
 }
 
@@ -382,9 +382,17 @@ section.step-form .step-box .step-bg .step-image {
 	z-index: 1;
 }
 
-section.step-form .step-box .step-bg .step-image img {
+section.step-form .step-box .step-bg .step-image img:first-child {
 	height: 100%;
 	width: 100%;
+}
+
+section.step-form .step-box .step-bg img.brokers-img {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 80px;
+	z-index: 3;
 }
 
 section.step-form .step-box .step-bg::after {

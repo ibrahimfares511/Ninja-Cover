@@ -9,6 +9,7 @@ const endStepButton = document.querySelector("#end_step");
 const indicators = document.querySelectorAll(".indicator span");
 const countrySelect = document.querySelector("#country");
 const countryImg = document.querySelector(".step-image img");
+const brokersImg = document.querySelector(".brokers-img");
 const insuranceType = document.querySelectorAll(
 	'input[name="insurance_type"][type="radio"]'
 );
@@ -68,6 +69,10 @@ const goToStep = (stepNumber) => {
 
 const changeImage = (country) => {
 	// countryImg.setAttribute("src", `${baseUrl}images/countries/${country}.jpg`);
+	// brokersImg.setAttribute(
+	// 	"src",
+	// 	`${baseUrl}images/ninja-brokers/broker-${country}.png`
+	// );
 };
 
 previousButton.forEach((btn) => {
